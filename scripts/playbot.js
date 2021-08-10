@@ -14,9 +14,13 @@ function playbot() {
     nNumber = getRandomInt(1, 100);
 
     function start() {
-        let num = +prompt('Угадай число от 1 до 100', ' ');
+        let num = prompt('Угадай число от 1 до 100');
         console.log(num);
-
+        if (num > 100) {
+            console.log(num);
+            alert('Введенное число больше 100');
+            start();
+        }
         if (num <= 0 || num == null) {
             alert('Введите число от 1 до 100');
             start();
@@ -40,9 +44,11 @@ function playbot() {
                 }
             }
         } else {
-            alert('Введите число!');
+            alert('Введите число 333!');
             start();
         }
+        //  }
+        // start();
     }
     start();
 }
